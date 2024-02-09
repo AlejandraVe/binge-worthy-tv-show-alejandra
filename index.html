@@ -54,8 +54,21 @@
             background-color: var(--primary-color-transparent);
             padding: 10px;
         }
+
         .cast-character {
             width: 100px;
+        }
+
+
+        .item-list {
+            max-width: 700px;
+            display: flex;
+            scroll-behavior: smooth;
+            overflow: auto;
+        }
+
+        .item {
+            scroll-snap-align: center;
         }
 
         @media (max-width: 800px) {
@@ -174,9 +187,9 @@
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/556/original/once_upon_a_time.jpg?1707469202"
             alt="" class="img-fluid m-3 rounded shadow-sm second-picture border">
     </div>
-    <div class="m-4 cast">
+    <div class="m-4">
         <h1>Cast: Main Characters</h1>
-        <div class="container">
+        <div class="container cast">
             <div class="row align-items-center">
                 <div class="col-sm-2">
                     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/589/original/jennifer-morrison.jpeg?1707478147"
@@ -238,10 +251,34 @@
             </div>
         </div>
     </div>
-    
+    <div class="m-4">
+        <h1>Photos and Scenes</h1>
+        <div class="container">
+            <div>
+                <div class="item-list m-4">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/630/original/once_upon_a_time-2.jpg?1707485504"
+                        alt="" class="img-fluid item">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/629/original/MV5BMTQ4MTgyNTM0NV5BMl5BanBnXkFtZTcwMDcwNDQ5Ng__._V1_.jpg?1707485494"
+                        alt="" class="img-fluid item">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/627/original/rsz_13.jpg?1707485457"
+                        alt="" class="img-fluid item">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/626/original/robbie-kay-in-emonce-upon-a-timeem.jpg?1707485449"
+                        alt="" class="img-fluid item">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/624/original/descarga.jpeg?1707485422"
+                        alt="" class="img-fluid item">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/622/original/17731395183_300476f7a3_o.jpg?1707485410"
+                        alt="" class="img-fluid item">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/620/original/4x11_Belle_table_histoire_monde_Rumplestiltskin.jpg?1707485401"
+                        alt="" class="img-fluid item">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+
+
+        </script>
 
 </body>
 
