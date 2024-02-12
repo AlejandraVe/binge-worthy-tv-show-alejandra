@@ -26,7 +26,8 @@
             margin: 40px;
         }
 
-        p {
+        p,
+        .curiosities {
             font-size: 20px;
         }
 
@@ -49,6 +50,14 @@
             max-width: 50%;
         }
 
+        #about-ouat,
+        .curiosities {
+            background-color: var(--secondary-color-transparent);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 5px 5px var(--primary-color);
+        }
+
         .cast,
         .introduction,
         .watch {
@@ -60,26 +69,6 @@
 
         .cast-character {
             width: 100px;
-        }
-
-
-        .item-list {
-            max-width: 700px;
-            display: flex;
-            scroll-behavior: smooth;
-            overflow: auto;
-        }
-
-        .item {
-            scroll-snap-align: center;
-        }
-
-        #about-ouat,
-        .curiosities {
-            background-color: var(--secondary-color-transparent);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 10px 5px 5px var(--primary-color);
         }
 
         .carousel {
@@ -101,6 +90,20 @@
             cursor: pointer;
         }
 
+        .did-you-know-images {
+            width: 150px;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .curiosities-images {
+            width: 350px;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
         .watch-button {
             background-color: var(--secondary-color-transparent);
         }
@@ -114,7 +117,8 @@
                 font-size: 17px;
             }
 
-            p {
+            p,
+            .curiosities {
                 font-size: 14px;
             }
 
@@ -145,7 +149,7 @@
     <nav class="navbar navbar-expand-lg sticky-top" style="background-color: var(--primary-color-transparent);"
         data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#home">Home: Once Upon A Time</a>
+            <a class="navbar-brand" href="#home">Once Upon A Time</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -167,7 +171,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#watch">Watch Episodes</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -413,25 +417,43 @@
             <h1>Did you know...?</h1>
             <div class="m-3 curiosities">
                 Josh Dallas (Prince Charming) and Ginnifer Goodwin (Snow White) went on to marry in real life.
+                <br>
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/075/original/abf2a5a9c5222744_GettyImages-174150774.jpg?1707738754"
+                    alt="" class="img-fluid mt-3 did-you-know-images">
+
             </div>
             <div class="m-3 curiosities">
                 Most of the objects in Mr. Golds were brought in by the cast.
+                <br>
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/079/original/maxresdefault.jpg?1707739245"
+                    alt="" class="img-fluid mt-3 curiosities-images">
             </div>
             <div class="m-3 curiosities">
                 Several times during the series, Mr. Gold is seen wearing a wedding ring. This is because Robert Carlyle
                 has
                 forgotten
                 to remove his own ring; he has even tweeted about it.
+                <br>
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/083/original/20823568ouatgold1280-1437176483365.jpg?1707739549"
+                    alt="" class="img-fluid mt-3 curiosities-images">
             </div>
             <div class="m-3 curiosities">
                 Of all of the Prince and Princess couples that could have been the focal point of the series, Snow White
                 and Prince
                 Charming were chosen, because of Snow White and the Seven Dwarfs (1937) being the first movie Disney
                 produced.
+                <br>
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/090/original/Prince-Charming-And-Snow-White-disney-princess-couples-18702172-500-339.jpg?1707744350"
+                    alt="" class="img-fluid mt-3 curiosities-images">
             </div>
             <div class="m-3 curiosities">
-                The creators formally offered the part of the Blue Fairy, a.k.a. Mother Superior to singer Lady Gaga. However, according
-                to Edward Kitsis, they never heard back from her management staff. The part then went to Keegan Connor Tracy.
+                The creators formally offered the part of the Blue Fairy, a.k.a. Mother Superior to singer Lady Gaga.
+                However, according
+                to Edward Kitsis, they never heard back from her management staff. The part then went to Keegan Connor
+                Tracy.
+                <br>
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/091/original/1203554-keegan-connor-tracy-as-the-blue-fairy-on-once.jpg?1707744555"
+                    alt="" class="img-fluid mt-3 did-you-know-images">
             </div>
             <div class="m-3 curiosities">
                 Names for many characters in Storybrooke are often coordinated with their fairy tale counterpart. For
@@ -481,13 +503,14 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
-            </div>
-            <div class="button text-center">
-                <button type="button" class="btn btn-outline-success btn-lg m-4 border watch-button"><a
-                        href="https://www.disneyplus.com/series/once-upon-a-time/14p4BXYA2xok" target="_blank">Watch
-                        Once
-                        Upon A Time on
-                        Disney+</a></button>
+
+                <div class="button text-center">
+                    <button type="button" class="btn btn-outline-success btn-lg m-4 border watch-button"><a
+                            href="https://www.disneyplus.com/series/once-upon-a-time/14p4BXYA2xok" target="_blank">Watch
+                            Once
+                            Upon A Time on
+                            Disney+</a></button>
+                </div>
             </div>
         </div>
 
