@@ -49,7 +49,7 @@
             max-width: 50%;
         }
 
-        .cast, 
+        .cast,
         .introduction,
         .watch {
             background-color: var(--primary-color-transparent);
@@ -73,13 +73,18 @@
         .item {
             scroll-snap-align: center;
         }
- 
-        #about-ouat, 
+
+        #about-ouat,
         .photos {
             background-color: var(--secondary-color-transparent);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 10px 5px 5px var(--primary-color);
+        }
+
+        .carousel {
+            display: block;
+            margin: 0 auto;
         }
 
         .video {
@@ -99,9 +104,11 @@
             h1 {
                 font-size: 20px;
             }
+
             h3 {
                 font-size: 17px;
             }
+
             p {
                 font-size: 14px;
             }
@@ -113,13 +120,21 @@
             .second-picture {
                 max-width: 70%;
             }
+
             .youtube-video {
                 max-width: 80%;
             }
+
             .watch-button {
                 font-size: 15px;
             }
 
+        }
+
+        @media (min-width: 800px) {
+            .carousel {
+                width: 750px;
+            }
         }
     </style>
     <nav class="navbar navbar-expand-lg sticky-top" style="background-color: var(--primary-color-transparent);"
@@ -133,7 +148,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#about-ouat">About</a>
+                        <a class="nav-link" aria-current="page" href="#about-section">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#cast">Cast</a>
@@ -152,7 +167,7 @@
 
 <body>
 
-    <div class="top-logo" id="home">
+    <div class="pt-5 top-logo" id="home">
         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/569/original/Once_Upon_a_Time_Logo.png?1707470784"
             alt="Logo of Once Upone a Time" class="logo">
     </div>
@@ -181,10 +196,10 @@
                 </div>
             </div>
         </div>
-        <div class="m-4 p-4" id="about-ouat">
+        <div class="m-4 p-4 pt-5" id="about-section">
             <h1>Once Upon a Time</h1>
             <h3>Rotten Tomatoes: 78% | IMDb: 7.7/10</h3>
-            <div>
+            <div id="about-ouat">
                 <p>
                     Once Upon a Time is an American fantasy adventure drama television series that aired for seven
                     seasons
@@ -204,8 +219,7 @@
                     people as
                     fairy-tale characters, in conjunction with their unfolding stories in the "real-world".
                 </p>
-            </div>
-            <div>
+                <br>
                 <p> Once Upon a Time was created by Lost and Tron: Legacy writers Edward Kitsis and Adam Horowitz. The
                     core
                     themes of the
@@ -232,7 +246,7 @@
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/556/original/once_upon_a_time.jpg?1707469202"
                 alt="" class="img-fluid m-3 rounded shadow-sm second-picture border">
         </div>
-        <div class="m-4" id="cast">
+        <div class="m-4 pt-5" id="cast">
             <h1>Cast: Main Characters</h1>
             <div class="container cast p-4">
                 <div class="row align-items-center">
@@ -296,30 +310,97 @@
                 </div>
             </div>
         </div>
-        <div class="m-4" id="photos">
+        <div class="m-4 pt-5" id="photos">
             <h1>Photos of the Show</h1>
-            <div class="container">
-                <div class="photos">
-                    <div class="item-list m-4">
-                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/630/original/once_upon_a_time-2.jpg?1707485504"
-                            alt="" class="img-fluid item">
-                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/629/original/MV5BMTQ4MTgyNTM0NV5BMl5BanBnXkFtZTcwMDcwNDQ5Ng__._V1_.jpg?1707485494"
-                            alt="" class="img-fluid item">
-                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/627/original/rsz_13.jpg?1707485457"
-                            alt="" class="img-fluid item">
-                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/626/original/robbie-kay-in-emonce-upon-a-timeem.jpg?1707485449"
-                            alt="" class="img-fluid item">
-                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/624/original/descarga.jpeg?1707485422"
-                            alt="" class="img-fluid item">
-                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/622/original/17731395183_300476f7a3_o.jpg?1707485410"
-                            alt="" class="img-fluid item">
-                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/620/original/4x11_Belle_table_histoire_monde_Rumplestiltskin.jpg?1707485401"
-                            alt="" class="img-fluid item">
-                    </div>
+            <div id="carouselExampleCaptions" class="carousel slide photos p-5">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
                 </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/630/original/once_upon_a_time-2.jpg?1707485504"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/629/original/MV5BMTQ4MTgyNTM0NV5BMl5BanBnXkFtZTcwMDcwNDQ5Ng__._V1_.jpg?1707485494"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/627/original/rsz_13.jpg?1707485457"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/626/original/robbie-kay-in-emonce-upon-a-timeem.jpg?1707485449"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Fourth slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/624/original/descarga.jpeg?1707485422"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Fifth slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/622/original/17731395183_300476f7a3_o.jpg?1707485410"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Sixth slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/114/620/original/4x11_Belle_table_histoire_monde_Rumplestiltskin.jpg?1707485401"
+                            class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Seventh slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
-        <div class="m-4" id="watch">
+        <div class="m-4 pt-5" id="watch">
             <h1>Watch Episodes</h1>
             <div class="watch p-4">
                 <p>You can find all 7 seasons of Once Upon A Time on <a href="https://www.disneyplus.com/home"
